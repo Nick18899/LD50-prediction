@@ -1,0 +1,6 @@
+name: "gcn"
+hidden_dim: 256
+num_classes: 3
+num_layers: 8
+dropout: 0.5
+

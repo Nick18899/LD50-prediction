@@ -1,0 +1,5 @@
+name: "mlp"
+hidden_dim: 512
+num_classes: 3
+dropout: 0.3
+

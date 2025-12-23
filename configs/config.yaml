@@ -1,0 +1,17 @@
+defaults:
+  - data: default
+  - model: mlp
+  - training: default
+  - _self_
+
+mlflow:
+  tracking_uri: "http://127.0.0.1:8080"
+  experiment_name: "toxicity_prediction"
+
+paths:
+  data_dir: "data"
+  output_dir: "outputs"
+  plots_dir: "plots"
+
+seed: 42
+

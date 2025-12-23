@@ -1,0 +1,14 @@
+raw_file: "mouse_external_descriptors_data_cleaned.pkl"
+processed_file: "data_feature_selected.pkl"
+smiles_col: "Canonical SMILES"
+target_col: "Toxicity Class Numeric"
+
+preprocessing:
+  const_thresh: 0.9
+  variance_thresh: 0.01
+  corr_thresh: 0.85
+
+split:
+  test_size: 0.15
+  val_size: 0.15
+
