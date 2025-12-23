@@ -34,11 +34,11 @@ ENV/
 *.swo
 
 # Data files (use DVC)
-*.pkl
+# *.pkl
 *.csv
 *.h5
 *.pth
-*.onnx
+# *.onnx
 *.trt
 *.cbm
 
@@ -57,6 +57,7 @@ mlruns/
 Thumbs.db
 
 # Outputs
-outputs/
+outputs/checkpoints/
+outputs/logs/
 lightning_logs/
 
