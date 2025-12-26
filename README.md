@@ -19,6 +19,7 @@
 - Датасет содержит ~44,685 химических соединений
 - 107 молекулярных дескрипторов после feature selection
 - SMILES-представления для GCN модели
+- Данные, использованные при обучении, доступны [по ссылке](https://drive.google.com/drive/folders/1xHTY-n4ranjK3vANFGJxG50SrhvZtajy?usp=share_link)
 
 ### Модели
 
