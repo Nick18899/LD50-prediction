@@ -4,9 +4,16 @@ import pickle
 from pathlib import Path
 
 import numpy as np
-import onnxruntime as ort
 import pandas as pd
 import torch
+
+try:
+    import onnxruntime as ort
+    ONNX_AVAILABLE = True
+except ImportError:
+    ONNX_AVAILABLE = False
+    print("Warning: onnxruntime not available. ONNX inference will not work.")
+    print("For Python 3.14, onnxruntime is not yet available. Use Python 3.10-3.12 for ONNX support.")
 
 from toxicity_prediction.data.dataset import MoleculeGraphDataset
 from toxicity_prediction.models.gcn import GCN
@@ -20,6 +27,12 @@ def predict_mlp(
     smiles_col: str = "Canonical SMILES",
 ) -> np.ndarray:
     """Runs MLP inference using ONNX model."""
+    if not ONNX_AVAILABLE:
+        raise ImportError(
+            "onnxruntime is not available. "
+            "Please use Python 3.10-3.12 or install onnxruntime manually."
+        )
+    
     with open(scaler_path, "rb") as file:
         scaler = pickle.load(file)
 

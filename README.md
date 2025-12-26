@@ -28,7 +28,15 @@
 
 ## Setup
 
-### 1. Установите Poetry
+**Важно:** Проект требует Python 3.10-3.13 (onnxruntime не поддерживает Python 3.14).
+Если у вас установлен Anaconda, используйте Python из conda:
+
+```bash
+# Проверьте версию Python
+/opt/homebrew/anaconda3/bin/python --version  # должна быть 3.10-3.13
+```
+
+### 1. Установите Poetry (опционально)
 
 ```bash
 pip install poetry
